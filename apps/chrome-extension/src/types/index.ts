@@ -1,4 +1,4 @@
-export type Personality = 'monsoft' | 'vernisai' | 'personal';
+export type Personality = "monsoft" | "vernisai" | "personal";
 
 export interface SelectedText {
   text: string;

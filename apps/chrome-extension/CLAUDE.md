@@ -1,6 +1,7 @@
 # CLAUDE.md - VernisAI Chrome Extension
 
 ## Build & Development Commands
+
 ```
 npm install           # Install dependencies
 npm run dev           # Start development server with HMR
@@ -12,6 +13,7 @@ npm run lint:fix      # Fix ESLint issues
 ```
 
 ## Code Style Guidelines
+
 - **Framework**: React 18+ with TypeScript & functional components
 - **State**: React Context API and hooks for state management
 - **CSS**: Tailwind with CSS modules for component styling
@@ -23,6 +25,7 @@ npm run lint:fix      # Fix ESLint issues
 - **Error Handling**: Try/catch with typed errors, fallback UI components
 
 ## Architecture
+
 - Component-based React architecture with TypeScript
 - Chrome Extension manifest v3 compliant
 - OpenAI API integration for content generation

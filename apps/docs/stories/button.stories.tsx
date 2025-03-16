@@ -37,8 +37,8 @@ export const Primary: Story = {
     children: "Hello",
     type: "reset",
     style: {
-      "padding": 10,
-      "borderRadius": 10
+      padding: 10,
+      borderRadius: 10,
     },
   },
 };

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { X } from 'lucide-react';
-import { Button } from '../ui/button';
-import { useToast } from '../ui/use-toast';
-import { setApiKey as saveApiKey } from '../../services/storage';
+import React, { useState } from "react";
+import { X } from "lucide-react";
+import { Button } from "../ui/button";
+import { useToast } from "../ui/use-toast";
+import { setApiKey as saveApiKey } from "../../services/storage";
 
 interface SettingsModalProps {
   apiKey: string;
@@ -23,15 +23,15 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
       await saveApiKey(inputApiKey);
       setApiKey(inputApiKey);
       toast({
-        title: 'Settings Saved',
-        description: 'Your API key has been saved successfully',
+        title: "Settings Saved",
+        description: "Your API key has been saved successfully",
       });
       onClose();
     } catch (error) {
       toast({
-        title: 'Error',
-        description: 'Failed to save settings',
-        variant: 'destructive',
+        title: "Error",
+        description: "Failed to save settings",
+        variant: "destructive",
       });
     }
   };
