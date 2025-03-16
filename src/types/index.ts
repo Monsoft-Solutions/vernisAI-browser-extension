@@ -16,7 +16,15 @@ export interface ApiResponse {
 
 export interface Message {
   type: string;
-  payload?: any;
+  payload?: unknown;
+}
+
+export interface UseReplyPayload {
+  text: string;
+}
+
+export interface FillReplyFieldPayload {
+  text: string;
 }
 
 export interface StorageData {

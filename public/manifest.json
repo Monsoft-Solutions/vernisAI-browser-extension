@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "VernisAI",
+  "name": "VernisAI - AI-Driven Writing Assistant",
   "version": "0.1.0",
-  "description": "Generate context-aware replies for social media platforms",
+  "description": "Run your custom VernisAI autonomous agents directly in your browser to generate content and automate tasks",
   "action": {
     "default_icon": {
       "16": "icons/icon16.png",

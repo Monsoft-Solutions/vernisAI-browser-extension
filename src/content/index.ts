@@ -1,4 +1,4 @@
-import { Message, SelectedText } from '../types';
+import { FillReplyFieldPayload, Message, SelectedText } from '../types';
 
 let selectedText = '';
 
@@ -22,7 +22,8 @@ document.addEventListener('mouseup', () => {
 // Listen for messages from the background script
 chrome.runtime.onMessage.addListener((message: Message) => {
   if (message.type === 'FILL_REPLY_FIELD') {
-    const { text } = message.payload;
+    const payload = message.payload as FillReplyFieldPayload;
+    const { text } = payload;
     insertTextIntoReplyField(text);
   }
   return true;

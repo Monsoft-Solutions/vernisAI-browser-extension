@@ -1,4 +1,4 @@
-import { Message, SelectedText } from '../types';
+import { Message, SelectedText, UseReplyPayload } from '../types';
 
 // Store the most recently selected text
 let currentSelectedText: SelectedText | null = null;
@@ -17,7 +17,8 @@ chrome.runtime.onMessage.addListener((message: Message, sender, sendResponse) =>
     sendResponse(currentSelectedText);
   } else if (message.type === 'USE_REPLY') {
     // Forward the reply text to the content script
-    const { text } = message.payload;
+    const payload = message.payload as UseReplyPayload;
+    const { text } = payload;
     const tabId = sender.tab?.id;
     
     if (tabId) {
