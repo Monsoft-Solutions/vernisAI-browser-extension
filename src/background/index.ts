@@ -34,12 +34,7 @@ chrome.runtime.onMessage.addListener((message: Message, sender, sendResponse) =>
   return true;
 });
 
-// When the extension icon is clicked, check if there's selected text
-chrome.action.onClicked.addListener(() => {
-  if (currentSelectedText) {
-    chrome.action.setBadgeText({ text: '' });
-  }
-});
+// Clear badge when popup is opened (happens automatically with default_popup)
 
 // Initialize extension state
 chrome.runtime.onInstalled.addListener(() => {

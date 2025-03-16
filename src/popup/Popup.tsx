@@ -136,24 +136,27 @@ const Popup: React.FC = () => {
   };
 
   return (
-    <div className="popup-container p-4 h-full flex flex-col">
-      <header className="flex items-center justify-between mb-4">
-        <h1 className="text-xl font-bold">VernisAI</h1>
+    <div className="popup-container flex flex-col">
+      <header className="flex items-center justify-between p-3 border-b">
+        <h1 className="text-lg font-bold">VernisAI</h1>
         <Button variant="ghost" size="icon" onClick={() => setShowSettings(true)}>
           <Settings className="h-5 w-5" />
         </Button>
       </header>
 
-      <main className="flex-1 flex flex-col space-y-4">
-        {selectedText ? (
-          <div className="border rounded-md p-3 bg-muted/30 text-sm overflow-auto max-h-24">
-            {selectedText.text}
-          </div>
-        ) : (
-          <div className="border rounded-md p-3 bg-muted/30 text-sm text-muted-foreground italic">
-            Select text on the webpage to generate a reply
-          </div>
-        )}
+      <main className="flex-1 flex flex-col p-3 space-y-3 overflow-y-auto">
+        <div className="space-y-1.5">
+          <h2 className="text-sm font-medium">Selected Text</h2>
+          {selectedText ? (
+            <div className="border rounded-md p-2 bg-muted/30 text-sm overflow-auto max-h-28">
+              {selectedText.text}
+            </div>
+          ) : (
+            <div className="border rounded-md p-2 bg-muted/30 text-sm text-muted-foreground italic">
+              Select text on the webpage to generate a reply
+            </div>
+          )}
+        </div>
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
@@ -188,8 +191,9 @@ const Popup: React.FC = () => {
         </div>
 
         {generatedReply && (
-          <div className="space-y-2">
-            <div className="border rounded-md p-3 bg-background text-sm overflow-auto max-h-32">
+          <div className="space-y-1.5">
+            <h2 className="text-sm font-medium">Generated Reply</h2>
+            <div className="border rounded-md p-2 bg-background text-sm overflow-auto max-h-28">
               {generatedReply}
             </div>
             <div className="flex space-x-2">
@@ -199,7 +203,7 @@ const Popup: React.FC = () => {
                 className="flex-1"
                 onClick={handleCopyReply}
               >
-                <Copy className="h-4 w-4 mr-2" />
+                <Copy className="h-4 w-4 mr-1" />
                 Copy
               </Button>
               <Button
@@ -208,7 +212,7 @@ const Popup: React.FC = () => {
                 className="flex-1"
                 onClick={handleUseReply}
               >
-                <Send className="h-4 w-4 mr-2" />
+                <Send className="h-4 w-4 mr-1" />
                 Use Reply
               </Button>
             </div>

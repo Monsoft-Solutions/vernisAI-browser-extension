@@ -38,7 +38,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-      <div className="bg-background rounded-lg shadow-lg w-80">
+      <div className="bg-background rounded-lg shadow-lg w-full max-w-sm mx-4">
         <div className="flex items-center justify-between p-4 border-b">
           <h2 className="text-lg font-medium">Settings</h2>
           <Button variant="ghost" size="icon" onClick={onClose}>
