@@ -34,10 +34,22 @@ VernisAI Chrome Extension is a browser-based tool that enables users to generate
 
 ### MVP Technical Stack
 
-- **Frontend**: HTML, CSS, JavaScript
+- **Frontend Framework**: React with TypeScript
+- **Build Tool**: Vite for fast development and optimized production builds
+- **CSS Framework**: Tailwind CSS for utility-first styling
+- **UI Components**: Shadcn UI for accessible, customizable components
+- **Icons**: Lucide Icons for consistent, lightweight iconography
 - **Extension Framework**: Chrome Extension API
 - **AI Integration**: OpenAI API (for MVP)
 - **Data Storage**: Chrome Storage API (for user preferences)
+
+### Development Architecture
+
+- Component-based architecture using React functional components
+- State management with React Context API and hooks
+- TypeScript for type safety and better developer experience
+- CSS modules with Tailwind for scoped styling
+- Vite for optimized bundling and hot module replacement
 
 ## Features Specification
 
@@ -55,7 +67,7 @@ VernisAI Chrome Extension is a browser-based tool that enables users to generate
 
 - **Description**: Allow users to choose between different response styles
 - **Implementation**:
-  - Dropdown or toggle UI in popup
+  - Dropdown or toggle UI in popup using Shadcn UI components
   - Options: Monsoft Solutions, VernisAI, Personal
   - Each personality has predefined tone and style parameters
 
@@ -138,6 +150,11 @@ VernisAI Chrome Extension is a browser-based tool that enables users to generate
 
 ### External Dependencies
 
+- React (^18.x)
+- Vite (^4.x)
+- Tailwind CSS (^3.x)
+- Shadcn UI components
+- Lucide Icons
 - OpenAI API
 - Chrome Extension API
 
@@ -151,8 +168,8 @@ VernisAI Chrome Extension is a browser-based tool that enables users to generate
 
 ### MVP Phase (4 weeks)
 
-- Week 1: Extension structure setup, content script for text selection
-- Week 2: Popup UI development and personality selection
+- Week 1: Extension structure setup, React/Vite configuration, content script for text selection
+- Week 2: Popup UI development with Tailwind/Shadcn and personality selection
 - Week 3: OpenAI API integration and response generation
 - Week 4: Testing, bug fixes, and initial release
 
@@ -170,14 +187,47 @@ VernisAI Chrome Extension is a browser-based tool that enables users to generate
 
 ## Technical Risks and Mitigations
 
-| Risk                             | Impact | Likelihood | Mitigation                                        |
-| -------------------------------- | ------ | ---------- | ------------------------------------------------- |
-| OpenAI API changes               | High   | Medium     | Implement adapter pattern for API interactions    |
-| Browser API compatibility issues | Medium | Low        | Use well-established APIs, feature detection      |
-| Performance degradation          | Medium | Medium     | Optimize request batching, implement caching      |
-| Security vulnerabilities         | High   | Low        | Regular security audits, minimal permission usage |
-| User data privacy concerns       | High   | Medium     | Clear privacy policy, data minimization approach  |
+| Risk                             | Impact | Likelihood | Mitigation                                            |
+| -------------------------------- | ------ | ---------- | ----------------------------------------------------- |
+| OpenAI API changes               | High   | Medium     | Implement adapter pattern for API interactions        |
+| Browser API compatibility issues | Medium | Low        | Use well-established APIs, feature detection          |
+| Performance degradation          | Medium | Medium     | Optimize request batching, implement caching          |
+| Security vulnerabilities         | High   | Low        | Regular security audits, minimal permission usage     |
+| User data privacy concerns       | High   | Medium     | Clear privacy policy, data minimization approach      |
+| React/Vite build size            | Medium | Medium     | Code splitting, tree shaking, and bundle optimization |
+
+## Development Environment Setup
+
+### Required Tools
+
+- Node.js (v22+)
+- npm
+- Git for version control
+- Chrome browser for testing
+
+### Project Structure
+
+```
+vernisai-chrome-extension/
+├── public/
+│   ├── manifest.json
+│   └── assets/
+├── src/
+│   ├── components/
+│   │   ├── ui/          # Shadcn UI components
+│   │   └── app/         # Application-specific components
+│   ├── content/         # Content scripts
+│   ├── background/      # Background scripts
+│   ├── popup/           # Popup interface
+│   ├── lib/             # Utilities and helpers
+│   ├── services/        # API services
+│   ├── types/           # TypeScript type definitions
+│   └── styles/          # Global styles
+├── vite.config.ts       # Vite configuration
+├── tailwind.config.js   # Tailwind configuration
+└── package.json
+```
 
 ## Conclusion
 
-This technical specification outlines the implementation approach for the VernisAI Chrome Extension, focusing on delivering a functional MVP with a clear path for future enhancements. The modular architecture allows for iterative development and feature expansion while maintaining core functionality.
+This technical specification outlines the implementation approach for the VernisAI Chrome Extension, focusing on delivering a functional MVP with a clear path for future enhancements. The modern tech stack of React, Vite, Tailwind CSS, Shadcn UI, and Lucide Icons will provide a solid foundation for building a performant, accessible, and visually appealing extension with excellent developer experience.
