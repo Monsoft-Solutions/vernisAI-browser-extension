@@ -35,12 +35,10 @@ export const Primary: Story = {
   name: "Button",
   args: {
     children: "Hello",
-    type: "button",
+    type: "reset",
     style: {
-      color: "blue",
-      border: "1px solid gray",
-      padding: 10,
-      borderRadius: 10,
+      "padding": 10,
+      "borderRadius": 10
     },
   },
 };
