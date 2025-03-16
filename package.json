@@ -16,7 +16,16 @@
     "prettier": "^3.2.5",
     "turbo": "^2.4.4"
   },
-  "name": "design-system",
+  "name": "@monsoft-solutions/vernisai-browser-extension",
+  "description": "VernisAI - AI-Powered No-Code Workflow Automation. This repo is used for the Browser Extensions (Chrome, Firefox, etc). Visit https://vernis.ai for more information.",
+  "author": "Monsoft Solutions, LLC (https://monsoftsolutions.com)",
+  "version": "0.0.1",
+  "license": "MIT",
+  "homepage": "https://vernis.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Monsoft-Solutions/vernisAI-browser-extension.git"
+  },
   "packageManager": "npm@10.9.2",
   "workspaces": [
     "apps/*",
